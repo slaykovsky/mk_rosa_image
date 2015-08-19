@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -ex
 #
 # Create a base ROSA Docker image.
 #
