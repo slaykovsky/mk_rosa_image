@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -ex
+#!/bin/bash -ex
 #
 # Create a base ROSA Docker image.
 #
@@ -22,9 +22,7 @@ if [[ -z $name ]]; then
   usage
 fi
 
-target=$(mktemp -d --tpmdir $(basename $0).XXXXXXXX)
-
-set -x
+target=$(mktemp -d --tmpdir $(basename $0).XXXXXXXX)
 
 mkdir -m 755 "$target"/dev
 mknod -m 600 "$target"/dev/console c 5 1
